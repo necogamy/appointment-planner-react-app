@@ -23,15 +23,9 @@ export const ContactForm = ({
 
   return (
     <form  onSubmit={handleSubmit}>
-      <label for='name'>Contact Name</label>
-      <input onChange={handleNameChange} value={name} id='name' placeholder='nico' type='text' />
-
-      <label for='tel'>Contact Phone</label>
-      <input onChange={handlePhoneChange} value={phone} pattern={phoneReg} placeholder='13-3344-5590' id='tel' type='tel' />
-
-      <label for='email'>Contact Email</label>
-      <input onChange={handleEmailChange} value={email} placeholder='madrazonecogamy@gmail.com' id='email' type='email' />
-
+      <input onChange={handleNameChange} value={name} placeholder='nico' type='text' />
+      <input onChange={handlePhoneChange} value={phone} pattern={phoneReg} placeholder='13-3344-5590' type='tel' />
+      <input onChange={handleEmailChange} value={email} placeholder='madrazonecogamy@gmail.com' type='email' />
       <input type='submit' />
     </form>
   );

@@ -25,7 +25,7 @@ export const ContactsPage = (props) => {
       if (contacts[contact].name === name) setDuplicate(true);
     }
     return () => { setDuplicate(false) };
-  }, [name]);
+  }, [name, contacts]);
 
   return (
     <div>

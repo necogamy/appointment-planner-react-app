@@ -3,7 +3,7 @@ import { AppointmentForm } from '../../components/appointmentForm/AppointmentFor
 import { TileList } from '../../components/tileList/TileList';
 
 export const AppointmentsPage = (props) => {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState('Meeting');
   const [contact, setContact] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -11,7 +11,7 @@ export const AppointmentsPage = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addAppointment(title, contact, date, time);
-    setTitle('');
+    setTitle('Meeting');
     setContact('');
     setDate('');
     setTime('');
