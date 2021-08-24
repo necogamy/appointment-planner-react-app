@@ -24,6 +24,7 @@ export const ContactsPage = (props) => {
     for (let contact in contacts) {
       if (contacts[contact].name === name) setDuplicate(true);
     }
+    return () => { setDuplicate(false) };
   }, [name]);
 
   return (
@@ -31,15 +32,13 @@ export const ContactsPage = (props) => {
       <section>
         <h2>Add Contact</h2>
         <ContactForm  
-          contactInfo={{
-            name,
-            setName,
-            phone,
-            setPhone,
-            email,
-            setEmail,
-            handleSubmit
-          }}
+          name={name}
+          setName={setName}
+          phone={phone}
+          setPhone={setPhone}
+          email={email}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}
         />
       </section>
       <hr />
@@ -50,5 +49,3 @@ export const ContactsPage = (props) => {
     </div>
   );
 };
-
-// If there is an error, change contact info prop
